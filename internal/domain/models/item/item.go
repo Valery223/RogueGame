@@ -7,6 +7,6 @@ import (
 type Item struct {
 	ID       int
 	Name     string
-	Position models.Position2d
-	Value    int // Price
+	Position models.Position2d // FIX MEEEEEEE (delete and make metod for word.GameMap)
+	Value    int               // Price
 }
