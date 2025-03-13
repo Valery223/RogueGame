@@ -7,10 +7,19 @@ import (
 )
 
 type GameMap struct {
-	Tiles []*Tile
+	Tiles [][]*Tile
 }
 
+type TileType = int
+
+const (
+	EmptyType TileType = iota
+	FloorType
+	WallType
+)
+
 type Tile struct {
+	Type     TileType
 	Position models.Position2d
 	Entities []*actor.Actor
 	Items    []*item.Item
